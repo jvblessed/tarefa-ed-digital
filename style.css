@@ -1,1 +1,26 @@
+body  {
+    background-color: blue;
+    color:aqua;
+    font-family: Arial, sans-serif;
+}
 
+header {
+ background-color: bisque;
+color: antiquewhite;
+text-align:center;
+padding: 30px;
+}
+ h1{
+font-size: 36px;
+
+ }
+
+ h2{
+
+    color: blanchedalmond;
+ }
+  p{
+font-size: 18px;
+line-height: 1.6;
+
+  }
