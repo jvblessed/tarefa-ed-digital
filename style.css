@@ -1,60 +1,232 @@
-body  {
-    background-color: blue;
-    color:aqua;
-    font-family: Arial, sans-serif;
+:root {
+    --cor-fundo: #f4f1e8;
+    --cor-texto: #29251f;
+    --cor-principal: #365b3b;
+    --cor-secundaria: #70482e;
+    --cor-hover: #263f2b;
+    --cor-superficie: #ffffff;
+    --cor-card: #e9dfce;
+    --cor-legenda: #625b50;
+    --cor-clara: #ffffff;
+    --cor-rodape: #29251f;
 }
+
+/* CONFIGURAÇÃO GERAL */
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* CABEÇALHO */
 
 header {
- background-color: bisque;
-color: antiquewhite;
-text-align:center;
-padding: 30px;
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 30px;
 }
- h1{
-font-size: 36px;
 
- }
+h1 {
+    font-size: 36px;
+}
 
- h2{
+header p {
+    max-width: 850px;
+    margin: 15px auto;
+}
 
-    color: blanchedalmond;
- }
-  p{
-font-size: 18px;
-line-height: 1.6;
+/* TÍTULOS */
 
-.tema-escuro {
---cor-fundo: #121212;
---cor-texto: #f5f5f5;
---cor-principal: #d7a6ca;
---cor-superficie: #1e1e1e;
---cor-card: #2b2530;
+h2 {
+    color: var(--cor-principal);
+}
 
+h3 {
+    color: var(--cor-secundaria);
+}
 
+/* TEXTOS */
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* MENU */
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    border-radius: 6px;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--cor-hover);
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section {
+    background-color: var(--cor-superficie);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* IMAGENS */
+
+img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: auto;
+    border-radius: 12px;
+}
+
+figure {
+    margin: 25px auto;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 14px;
+    color: var(--cor-legenda);
+    margin-top: 8px;
+}
+
+/* CURIOSIDADES */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--cor-card);
+    padding: 15px;
+    margin: 5px 0;
+    border-left: 6px solid var(--cor-principal);
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--cor-secundaria);
+}
+
+/* GALERIA */
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.galeria figure {
+    width: 100%;
+    margin: 10px auto;
+}
+
+.galeria img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: var(--cor-rodape);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+/* BOTÕES */
+
+button {
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor-hover);
+}
+
+/* BOTÃO CURTIR */
+
+.curtir {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.curtir.ativo {
+    background-color: var(--cor-secundaria);
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    main {
+        width: 92%;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    nav a {
+        margin: 4px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .galeria {
+        flex-direction: column;
+    }
 
 }
-  }
-
-  .galeria { 
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  }
-
-  .cards-curiosidades {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  }
-
-.btn-tema {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 22px;
-}
-  
