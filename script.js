@@ -23,3 +23,10 @@ botoesCurtir.forEach(function(botaoCurtir) {
     });
 
 });
+
+const bntTema = document.querySelector(".btn-tema");
+bntTema.addEventListener("click", mudarTema);
+function mudarTema(){
+    document.body.classList.toggle("tema-escuro");
+
+}

@@ -5,7 +5,7 @@
     --cor-secundaria: #70482e;
     --cor-hover: #263f2b;
     --cor-superficie: #ffffff;
-    --cor-card: #c5b697;
+    --cor-card: #867248;
     --cor-legenda: #534c41;
     --cor-clara: #ffffff;
     --cor-rodape: #29251f;
@@ -202,5 +202,16 @@ button:hover {
     .galeria {
         flex-direction: column;
     }
+
+}
+
+.btn.tema{
+position: fixed;
+right: 20px;
+bottom: 20px;
+width: 50px;
+height: 50px;
+border-radius: 50px;
+font-size: 22px;
 
 }
